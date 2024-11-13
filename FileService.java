@@ -29,7 +29,7 @@ public class FileService {
             e.printStackTrace();
         }
     }
-    public boolean checkFile(int matchTreshold){
+    public boolean checkFile(int matchThreshold){
         String line; //Перемінна для перевірки.
         int wordCounter = 0; //Рахує кількість співпадінь зі словником.
         try(BufferedReader br = new BufferedReader(new FileReader(pathToFileNew))) { //Відкриваємо файл.
@@ -45,7 +45,7 @@ public class FileService {
                         wordCounter++;
                     }
                 }
-                if (wordCounter >= matchTreshold) {//Якщо набрано достатньо співпадіннь зі словником, повертає true.
+                if (wordCounter >= matchThreshold) {//Якщо набрано достатньо співпадіннь зі словником, повертає true.
                     return true;
                 }
             }
