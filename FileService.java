@@ -6,8 +6,8 @@ public class FileService {
     private String pathToFile;
     private String pathToFileNew;
     private int key;
-    static final String[] engDictionary = {"the", "for", "when", "where", "one", "all", "that", "his", "her", "and", "you", "your", "this", "but", "get", "with", "have", "had", "has", "just", "can", "can't", "know", "here", "what", "your", "think", "down", "not"};
-    static final String[] ukrDictionary = {"так", "він", "ваш", "його", "вона", "вони", "був", "бути", "мав", "мати", "для", "робити", "робив", "сказати", "сказав", "йому", "від", "але", "мій", "твій", "твоя", "йшов", "йти", "один", "тому", "міг", "могли", "або"};
+    static final String[] engDictionary = {" the ", " for ", " when ", " where ", " one ", " all ", " that ", " his ", " her ", " and ", " you ", " your ", " this ", " but ", " get ", " with ", " have ", " had ", " has ", " just ", " can ", " can't ", " know ", " here ", " what ", " your ", " think ", " down ", " not "};
+    static final String[] ukrDictionary = {" так ", " він ", " ваш ", " його ", " вона ", " вони ", " був ", " бути ", " мав ", " мати ", " для ", " робити ", " робив ", " сказати ", " сказав ", " йому ", " від ", " але ", " мій ", " твій ", " твоя ", " йшов ", " йти ", " один ", " тому ", " міг ", " могли ", " або "};
 
     public FileService (String pathToFile, String pathToFileNew, int key){
         this.pathToFile = pathToFile;

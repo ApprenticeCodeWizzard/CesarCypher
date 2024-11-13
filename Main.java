@@ -58,8 +58,8 @@ public class Main {
                 System.out.println("\nFile decrypted.");
                 break;
             case "BRUTE_FORCE":
-                int matchTreshold = cwu.getMatchTreshold(); //Отримуємо скільки співпадінь зі словником треба, щоб вважати файл розшифрованим.
-                BruteForce bf = new BruteForce(pathToFile, pathToFileNew, matchTreshold); //Створюємо клас для брутфорсу.
+                int matchThreshold = cwu.getMatchThreshold(); //Отримуємо скільки співпадінь зі словником треба, щоб вважати файл розшифрованим.
+                BruteForce bf = new BruteForce(pathToFile, pathToFileNew, matchThreshold); //Створюємо клас для брутфорсу.
                 bf.bruteForceCycle();
                 break;
             default:

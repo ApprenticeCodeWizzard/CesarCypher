@@ -2,18 +2,18 @@ import java.io.*;
 
 public class BruteForce {
     private String pathToFile, pathToFileNew;
-    private int matchTreshold;
-    public BruteForce(String pathToFile, String pathToFileNew, int matchTreshold) {
+    private int matchThreshold;
+    public BruteForce(String pathToFile, String pathToFileNew, int matchThreshold) {
         this.pathToFile = pathToFile;
         this.pathToFileNew = pathToFileNew;
-        this.matchTreshold = matchTreshold;
+        this.matchThreshold = matchThreshold;
     }
 
     void bruteForceCycle() {
         for (int bfKey = 0; bfKey < 92; bfKey++) { //Пробуємо зсув букв на кожен ключ починаючи від 0.
             FileService fs = new FileService(pathToFile, pathToFileNew, -bfKey);//Ключ відємний, бо це дешифровка.
             fs.workWithFile();
-            if (fs.checkFile(matchTreshold)) { //Перевіряємо по словнику, чи є файл розшифрованим.
+            if (fs.checkFile(matchThreshold)) { //Перевіряємо по словнику, чи є файл розшифрованим.
                 System.out.println("\nYour file was bruteforced. The key was "+bfKey + ".");
                 if(bfKey == 0){
                     System.out.println("The file was not encrypted.");

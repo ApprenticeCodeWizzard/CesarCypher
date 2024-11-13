@@ -68,18 +68,18 @@ public class CommunicateWithUser {
         }
     }
 
-    public int getMatchTreshold() { //Отримуємо поріг співпадінь зі словником.
-        int treshold;
-        System.out.println("Match treshold is a varieble that defines how many words matched with dictionary the program requires to decide that text is bruteforced.");
-        System.out.println("Default value which suits most cases is 3. The general rule is the bigger file is, the larger match treshold should be. To big treshold leads to false negative results, to small - to false positive ones.");
+    public int getMatchThreshold() { //Отримуємо поріг співпадінь зі словником.
+        int threshold;
+        System.out.println("Match threshold is a variable that defines how many words matched with dictionary the program requires to decide that text is bruteforced.\nThe threshold must be between 1 and 100000, but at first I advice you to try smaller than 10.");
+        System.out.println("The general rule is the bigger file is, the larger match threshold should be.\nIf you got message that program couldn't bruteforce file, try smaller threshold. If you got message that file was successfully bruteforced, but it really wasn't, try bigger one.");
         while (true) {
             try {
-                System.out.println("Enter match treshold: ");
-                treshold = Integer.parseInt(scan.nextLine());
-                if (treshold > 0 && treshold < 100) {
-                    return treshold;
+                System.out.println("Enter match threshold: ");
+                threshold = Integer.parseInt(scan.nextLine());
+                if (threshold > 0 && threshold < 100000) {
+                    return threshold;
                 } else {
-                    System.out.println("Enter correct treshold. It must be integer number more then zero and less than 100.");
+                    System.out.println("Enter correct threshold. It must be integer number more then zero and less than 100000.");
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Please, type correct integer number.");
